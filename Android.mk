@@ -1,0 +1,12 @@
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := brcm_patchram_plus
+LOCAL_MODULE_TAGS := debug tests
+LOCAL_SHARED_LIBRARIES := libcutils liblog
+LOCAL_C_FLAGS := -DANDROID
+LOCAL_CFLAGS = $(L_CFLAGS)
+LOCAL_SRC_FILES := brcm_patchram_plus.c
+LOCAL_C_INCLUDES := $(INCLUDES)
+LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+include $(BUILD_EXECUTABLE)
